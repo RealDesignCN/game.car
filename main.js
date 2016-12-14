@@ -53,12 +53,12 @@ cc.game.onStart = function(){
     cc.view.resizeWithBrowserSize(true);
     //load resources
 
-    if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
-        Ads.fullViewAds(function(){
-            //clearInterval(timer);
-            //runScene();
-        });
-    }
+    //if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
+    //    Ads.fullViewAds(function(){
+    //        //clearInterval(timer);
+    //        //runScene();
+    //    });
+    //}
 
 
     //cc.LoaderScene.preload(g_resources, function(){
@@ -94,6 +94,6 @@ cc.game.onStart = function(){
 };
 
 
-window.location.href.match('ookor')&&
+//window.location.href.match('ookor')&&
 cc.game.run();
 
