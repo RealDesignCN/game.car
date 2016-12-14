@@ -7,12 +7,12 @@ game.PauseLayer = cc.Layer.extend({
     ctor:function(){
         this._super();
 
-        if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
-            Ads.fullViewAds(function(){
-                //clearInterval(timer);
-                //runScene();
-            });
-        }
+        //if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
+        //    Ads.fullViewAds(function(){
+        //        //clearInterval(timer);
+        //        //runScene();
+        //    });
+        //}
 
 
         var node = new cc.Node();
@@ -35,12 +35,12 @@ game.PauseLayer = cc.Layer.extend({
         var retryItem = new cc.MenuItemImage(res.retry_png,res.retry_png, res.retry_png, function(){
             cc.director.resume();
 
-            if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
-                //setTimeout(function(){
-                Ads.bottomAds();
-                //}, 10 * 1000);
-
-            }
+            //if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
+            //    //setTimeout(function(){
+            //    Ads.bottomAds();
+            //    //}, 10 * 1000);
+            //
+            //}
 
             self.removeFromLayer();
         }, this);
@@ -50,12 +50,7 @@ game.PauseLayer = cc.Layer.extend({
 
         var quitItem = new cc.MenuItemImage(res.quit_png,res.quit_png, res.quit_png, function(){
             cc.log('quit...');
-            if(game._Config.language == game._Enum.language.en){
-                window.location.href="http://ookor.com";
-            }else {
-                window.location.href="http://www.59600.com";
-            }
-
+            window.location.href="http://mingz.me";
         }, this);
         quitItem.setPosition(cc.p(bgSize.width * 0.8, bgSize.height * 0.15));
         quitItem.setAnchorPoint(cc.p(0.5,0));

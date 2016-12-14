@@ -9,12 +9,12 @@ game.GameScene = cc.Scene.extend({
         var self = this;
 
 
-        if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
-            //setTimeout(function(){
-                Ads.bottomAds();
-            //}, 10 * 1000);
-
-        }
+        //if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
+        //    //setTimeout(function(){
+        //        Ads.bottomAds();
+        //    //}, 10 * 1000);
+        //
+        //}
 
 
         this._gameLayer = new game.GameLayer();

@@ -8,12 +8,12 @@ game.GameOverLayer = cc.Layer.extend({
         this._super();
         var self = this;
 
-        if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
-            Ads.fullViewAds(function(){
-                //clearInterval(timer);
-                //runScene();
-            });
-        }
+        //if(game._Config.show_ads && game._Config.language == game._Enum.language.en) {
+        //    Ads.fullViewAds(function(){
+        //        //clearInterval(timer);
+        //        //runScene();
+        //    });
+        //}
 
         var node = new cc.Node();
 
@@ -41,11 +41,7 @@ game.GameOverLayer = cc.Layer.extend({
 
         var shareItem = new cc.MenuItemImage(res.share_png,res.share_png, res.share_png, function(){
             cc.log('share...');
-            if(game._Config.language == game._Enum.language.en){
-                window.location.href="http://ookor.com";
-            }else {
-                window.location.href="http://www.59600.com";
-            }
+            window.location.href="http://mingz.me";
         }, this);
         shareItem.setPosition(cc.p(bgSize.width * 0.8, bgSize.height * 0.15));
         shareItem.setAnchorPoint(cc.p(0.5,0));
